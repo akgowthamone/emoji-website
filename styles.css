@@ -1,0 +1,99 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Ensure ads are positioned relative to the body */
+}
+
+header {
+    background-color: #ffcc00;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.emoji {
+    font-size: 3rem;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+
+.emoji:hover {
+    transform: scale(1.1);
+    background-color: #ffeb3b;
+}
+
+/* Notification styling */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Ad styling */
+.ad {
+    position: fixed;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 150px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.ad-top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.ad-top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.ad-bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.ad-bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
